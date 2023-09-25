@@ -1,0 +1,164 @@
+%\documentclass{book}
+\documentclass[11pt,twoside,openright]{report}
+\usepackage[a4paper]{geometry}
+\geometry{top=2cm, bottom=2cm, left=1cm, right=1cm, marginparsep=1cm}
+
+\usepackage{hyperref}
+\usepackage[mongolian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{blkarray}
+\usepackage{mathtools}
+\usepackage{soul}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\def\Mc[#1]#2#3{\multicolumn{#1}{#2}{#3}}
+\def\mc#1#2{\multicolumn{1}{#1}{#2}}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\rfoot{maruka@rocketmail.com}
+
+\usepackage{imakeidx}
+\makeindex[columns=3, title=Index, intoc]
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+
+\usetikzlibrary{calc,shadows,arrows.meta,patterns,matrix}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows,arrows.meta,patterns,matrix}
+
+
+%----- Ensembles : entiers, reels, complexes -----
+\newcommand{\Nn}{\mathbb{N}} \newcommand{\N}{\mathbb{N}}
+\newcommand{\Zz}{\mathbb{Z}} \newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Qq}{\mathbb{Q}} \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Rr}{\mathbb{R}} \newcommand{\R}{\mathbb{R}}
+\newcommand{\Cc}{\mathbb{C}} 
+\newcommand{\Kk}{\mathbb{K}} \newcommand{\K}{\mathbb{K}}
+
+%----- Modifications de symboles -----
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\Re}{\mathop{\text{Re}}\nolimits}
+\renewcommand{\Im}{\mathop{\text{Im}}\nolimits}
+%\newcommand{\llbracket}{\left[\kern-0.15em\left[}
+%\newcommand{\rrbracket}{\right]\kern-0.15em\right]}
+
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\epsilon}{\varepsilon}
+
+
+
+
+%----- Commandes divers ------
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\id}{\mathop{\text{id}}\nolimits}
+\newcommand{\Ker}{\mathop{\text{Ker}}\nolimits}
+\newcommand{\Card}{\mathop{\text{Card}}\nolimits}
+\newcommand{\Vect}{\mathop{\text{Vect}}\nolimits}
+\newcommand{\Mat}{\mathop{\text{Mat}}\nolimits}
+\newcommand{\rg}{\mathop{\text{rg}}\nolimits}
+\newcommand{\tr}{\mathop{\text{tr}}\nolimits}
+
+
+
+\definecolor{myred}{rgb}{0.93,0.26,0}
+\definecolor{myorange}{rgb}{0.97,0.58,0}
+\definecolor{myyellow}{rgb}{1,0.86,0}
+
+\newenvironment{theoreme}[1][]{%
+   \setbeamercolor{block title}{fg=structure,bg=structure!40}
+   \setbeamercolor{block body}{fg=black,bg=structure!10}
+   \begin{block}{{\bf Теорем }#1}
+}{%
+   \end{block}%
+}
+
+\newtheorem{mydef}{Тодорхойлолт}
+\newtheorem{ob}{Ажиглалт}
+\newtheorem{ex}{Жишээ}
+\newtheorem{no}{Тэмдэглэгээ}
+\newtheorem{ug}{Өгүүлбэр}
+\newtheorem{cha}{Чанар}
+\newtheorem{the}{Теорем}
+\newcommand{\defi}[1]{{\color{myorange}\textbf{\emph{#1}}}}
+\newcommand{\evidence}[1]{{\color{blue}\textbf{\emph{#1}}}}
+\newcommand{\change}{{\color{red}\rule{\textwidth}{1mm}\\}}
+
+
+\newcommand{\diapo}{\newpage
+\hfill {\normalsize  Diapo \themydiapo \quad \texttt{[\jobname]}} \\
+\stepcounter{mydiapo}}
+
+\definecolor{myorange}{rgb}{0.97,0.58,0}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	
+	\par\
+	\vspace{0.5 cm}
+	
+	\vspace{5.5cm}
+	{\huge\bfseries  МАТЕМАТИК I тэмдэглэл \par}
+	\vspace{1cm}
+	\raggedleft
+	{\Large\bfseries  
+	 Б.Уранбилэг\par}
+	\vspace{1cm}
+	\raggedleft
+	%\large\bfseries СЭЗИС\\ХМСТ
+	\par
+	\raggedleft 
+	\vfill
+\centering
+	{\large Хичээлийн жил 2022-2022 \par}
+	\tableofcontents
+\end{titlepage}
+\chapter{Олонлог}
+\input{t/1}
+\chapter{Вектор}
+\input{t/2.1}
+\chapter{Функц}
+\input{t/5}
+\chapter{Xязгаар}
+\input{t/10}
+\chapter{Уламжлал}
+\input{t/11}
+\chapter{Интеграл}
+\input{t/12}
+\chapter{Mатриц}
+\input{t/7}
+\chapter{Тодорхойлогч}
+\input{t/8}
+\chapter{Шугаман тэгшитгэлийн систем}
+\input{t/9}
+\chapter{Шугаман програмчлал}
+\input{t/13}
+\input{t/pp}
+\chapter{Хавсралт}
+\input{t/appendix}
+\input{t/a1}
+\input{t/i}
+\end{document}
